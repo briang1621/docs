@@ -17,8 +17,8 @@
             "group": "Overview",
             "pages": [
               "index",
-              "features",
-              "quickstart",
+              "features", 
+              "sys_overview", 
               "development"
             ]
           } 
