@@ -14,12 +14,12 @@
         "tab": "Guides",
         "groups": [
           {
-            "group": "Get Started",
+            "group": "Overview",
             "pages": [
               "index",
+              "features",
               "quickstart",
-              "development",
-              "features"
+              "development"
             ]
           },
           {
