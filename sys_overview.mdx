@@ -5,11 +5,11 @@ description: "This page presents a clear overview of the high-level architecture
 
 ## High Level System Architecture
 
-The image below shows the system architecture for [Call-Emma.ai](http://Call-Emma.ai) 
+The image below shows the system architecture for [Call-Emma.ai](http://Call-Emma.ai)
 
 ![Call-Emma.ai System Architecture ](/images/sys.png)
 
-## API Layer 
+## API Layer
 
 FastAPI makes [Call-Emma.AI](http://Call-Emma.AI) faster and more responsive by handling requests with high performance. It ensures reliable and secure data handling, so your interactions are always accurate and protected. With built-in live documentation, updates and improvements roll out quickly—keeping your experience smooth and up to date.
 
@@ -21,7 +21,7 @@ FastAPI makes [Call-Emma.AI](http://Call-Emma.AI) faster and more responsive by 
 
 Queue Management Call-Emma.ai is built to process high volumes of recorded conversations by applying prioritization and intelligent queuing to incoming job requests. Administrators can configure custom priority tiers to enable expedited processing—ideal for premium service levels or tiered pricing models. Additionally, robust logging and error handling ensure that failed jobs are automatically detected, logged, and reprocessed with minimal manual intervention.
 
-## Administration Panel Features 
+## Administration Panel Features
 
 ### Customized Billing
 
@@ -35,12 +35,24 @@ The administration panel also provides detailed usage visibility, with the abili
 
 The tenant management system enables administrators to activate, suspend, or remove clients, as well as manage and issue API tokens for secure system access. 
 
-## Geneartive AI Workflow
+## Converstation Transcript Workflow 
 
 ### Audio Filtering & Speed Correction
 
-To enhance the accuracy of voice-to-text transcription, Call-Emma.ai can apply preprocessing techniques to the audio. These include an audio filtering model that removes background chatter and ambient noise, as well as speed normalization to correct irregular speaking rates. Together, these enhancements significantly improve voice-to-text transcription precision.
+To enhance the accuracy of voice-to-text transcription, Call-Emma.ai can apply preprocessing techniques to the audio. These include selecting the audio filtering model that removes background chatter and ambient noise, as well as an model that normalizes speed to correct irregular speaking rates. Together, these enhancements significantly improve voice-to-text transcription precision.
 
 ### Speech-to-Text Translation
 
-ddd
+Speech-to-text transcription accuracy is a critical performance metric for any system. Call-Emma.ai supports multiple AI transcription models, including options for diarization, which can be selected and deployed as needed. When combined with advanced audio filtering and speed normalization, these models deliver significantly higher accuracy than transcription models alone.
+
+### Privacy and Personal Information
+
+After the conversation transcript is generated, clients have the option to remove personal and protected information using a PPI (Personally Identifiable Information) removal model. With access to a range of widely adopted models, Call-Emma.ai ensures sensitive data is excluded from transcripts and helps clients meet national and regional compliance standards. 
+
+## Generative AI Workflow
+
+### Standardize Prompts 
+
+After the conversation
+
+Link to Generative AI Prompts 
