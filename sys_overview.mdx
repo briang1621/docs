@@ -1,14 +1,46 @@
 ---
 title: "System Overview"
-description: "Description of your new file."
+description: "This page presents a clear overview of the high-level architecture and core components that power Call-Emma.ai, offering insights into how the system is designed to deliver intelligent and scalable customer engagement."
 ---
 
-ddddd
+## High Level System Architecture
 
-dd
+The image below shows the system architecture for [Call-Emma.ai](http://Call-Emma.ai) 
 
-d
+![Call-Emma.ai System Architecture ](/images/sys.png)
 
-d
+## API Layer 
 
-![sys.png](/images/sys.png)
+FastAPI makes [Call-Emma.AI](http://Call-Emma.AI) faster and more responsive by handling requests with high performance. It ensures reliable and secure data handling, so your interactions are always accurate and protected. With built-in live documentation, updates and improvements roll out quickly—keeping your experience smooth and up to date.
+
+## Audio Uploads
+
+[Call-Emma.AI](http://Call-Emma.AI) accepts audio recordings in WAV, MP3, and M4A formats—widely used in call center systems. These large files (2–50MB) are uploaded securely via FastAPI’s optimized **streaming upload mechanism**, ensuring fast, reliable handling without timeouts or memory issues. This guarantees compatibility with common formats while supporting high-volume, real-world call recordings.
+
+## Queue Management
+
+Queue Management Call-Emma.ai is built to process high volumes of recorded conversations by applying prioritization and intelligent queuing to incoming job requests. Administrators can configure custom priority tiers to enable expedited processing—ideal for premium service levels or tiered pricing models. Additionally, robust logging and error handling ensure that failed jobs are automatically detected, logged, and reprocessed with minimal manual intervention.
+
+## Administration Panel Features 
+
+### Customized Billing
+
+Call-Emma.ai offers flexible billing capabilities, allowing each customer to be charged different rates based on usage volume and the specific features applied to their conversations. Each customer can be assigned a unique billing profile, ensuring accurate and customized rate application.
+
+### Usage Tracking
+
+The administration panel also provides detailed usage visibility, with the ability to drill down by user, department, and client. This data can also be accessed programmatically via the API by the client or admin for seamless integration with external reporting or billing systems.
+
+### Tenant Management
+
+The tenant management system enables administrators to activate, suspend, or remove clients, as well as manage and issue API tokens for secure system access. 
+
+## Geneartive AI Workflow
+
+### Audio Filtering & Speed Correction
+
+To enhance the accuracy of voice-to-text transcription, Call-Emma.ai can apply preprocessing techniques to the audio. These include an audio filtering model that removes background chatter and ambient noise, as well as speed normalization to correct irregular speaking rates. Together, these enhancements significantly improve voice-to-text transcription precision.
+
+### Speech-to-Text Translation
+
+ddd
