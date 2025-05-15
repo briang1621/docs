@@ -1,16 +1,35 @@
 ---
 title: "Configuration Options"
-description: "Description of your new file.
-
-
-
-"
+description: "The Configuration Page in Emma Call Center Software puts you in control, offering a simple way to customize the platform to match your specific business processes. Whether you're ready to use Emma right out of the box or need to fine-tune it to fit your exact requirements, this page makes it easy. Built with both flexibility and ease of use in mind, it’s designed for technical teams and developers alike to adapt Emma to your evolving needs—so your call center works the way you do."
 ---
 
-## Database Connection
+## Overview of Configuration Options
 
-| Title           | Database Connection                                                                                                                                                    |
+ 1. **Database Connection**	 Configures storage location for audio files and transcripts on a per-client basis.
+ 2. **Call List Table Location**	Specifies the location of database tables where all call information is stored.
+ 3. **Notification URL**	Specifies the web URL for receiving status notifications about conversations being processed.
+ 4. **Audio Filter Model**	Specifies which noise filter model is used to process audio files. The processed audio file is saved after filtering.
+ 5. **Audio Speed Optimization**	Adjusts the phoneme rate to an optimal level for the speech-to-text model.
+ 6. **Retain Original Audio File**	Controls whether the original audio file is kept or deleted after processing.
+ 7. **Remove Personal Information** Removes personally identifiable information (PII) from conversation transcripts.
+ 8. **AI Summary Enabled**	Controls the generation of conversation summaries from chat transcripts.
+ 9. **AI Summary LLM Model**	Specifies which large language model (LLM) is used for generating conversation summaries.
+10. **AI Summary API Type**	Specifies the API protocol used to communicate with the selected LLM model.
+11. **AI Summary URL**	Specifies the location of the LLM used for generating summaries, which may be on the local server or at a remote endpoint.
+12. **AI Summary Token**	Specifies the authentication token for accessing the AI model used for summaries.
+13. **LLM Query Configuration**	Controls which specific LLM query operations are executed on the AI model.
+14. **LLM Query LLM Model**	Specifies which large language model (LLM) is used for processing queries.
+15. **LLM Query API Type**	Specifies the API protocol used to communicate with the selected LLM model for query processing.
+16. **LLM Query URL**	Specifies the location of the LLM used for processing queries, which may be on the local server or at a remote endpoint.
+17. **LLM Query Token**	Specifies the authentication token for accessing the AI model used for query processing.
+
+## Specific Configuration Details
+
+### Database Connection
+
+| Item            | Description                                                                                                                                                            |
 | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Title           | Database Connection                                                                                                                                                    |
 | Description     | Configures storage location for audio files and transcripts on a per-client basis.                                                                                     |
 | Benefits        | Provides data isolation in multi-tenant deployments, enhancing security and meeting compliance requirements.                                                           |
 | Variable Name   | database                                                                                                                                                               |
@@ -19,102 +38,206 @@ description: "Description of your new file.
 | Notes           | Enables data separation in multi-tenant environments for security, compliance, or redundancy purposes. Particularly useful when clients require isolated data storage. |
 | Default Value   | defaults to environmental file's configuration                                                                                                                         |
 
-| Title           | |
-| --------------- | --- |
-| Description     | |
-| Benefits        | |
-| Variable Name   | |
-| Required        | |
-| Accepted Values | |
-| Notes           | |
-| Default Value   | |
+### Database Connection
 
-| Title           | |
-| --------------- | --- |
-| Description     | |
-| Benefits        | |
-| Variable Name   | |
-| Required        | |
-| Accepted Values | |
-| Notes           | |
-| Default Value   | |
+| Title           | Database Connection                                                                                                                                                    |
+| :-------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Description     | Configures storage location for audio files and transcripts on a per-client basis.                                                                                     |
+| Benefit         | Provides data isolation in multi-tenant deployments, enhancing security and meeting compliance requirements.                                                           |
+| Variable name   | database                                                                                                                                                               |
+| Required        | No                                                                                                                                                                     |
+| Accepted values | database connection address:port:login                                                                                                                                 |
+| Notes           | Enables data separation in multi-tenant environments for security, compliance, or redundancy purposes. Particularly useful when clients require isolated data storage. |
+| Default value   | defaults to environmental file's configuration                                                                                                                         |
 
-| Title           | |
-| --------------- | --- |
-| Description     | |
-| Benefits        | |
-| Variable Name   | |
-| Required        | |
-| Accepted Values | |
-| Notes           | |
-| Default Value   | |
+### Call List Table Location
 
-| Title           | |
-| --------------- | --- |
-| Description     | |
-| Benefits        | |
-| Variable Name   | |
-| Required        | |
-| Accepted Values | |
-| Notes           | |
-| Default Value   | |
+| Title           | Call List Table Location                                                                                                                                       |
+| :-------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Description     | Specifies the location of the database table where all call information is stored on a per-client basis.                                                       |
+| Benefit         | Enables segregation of call data for enhanced security and compliance in multi-tenant environments.                                                            |
+| Variable name   | table                                                                                                                                                          |
+| Required        | No                                                                                                                                                             |
+| Accepted values | Database location URL                                                                                                                                          |
+| Notes           | Allows clients to store their call database tables in secure, isolated locations. Particularly valuable in multi-tenant deployments requiring data separation. |
+| Default value   | defaults to environmental file's configuration                                                                                                                 |
 
-| Title           | |
-| --------------- | --- |
-| Description     | |
-| Benefits        | |
-| Variable Name   | |
-| Required        | |
-| Accepted Values | |
-| Notes           | |
-| Default Value   | |
+### Notification URL
 
-| Title           | |
-| --------------- | --- |
-| Description     | |
-| Benefits        | |
-| Variable Name   | |
-| Required        | |
-| Accepted Values | |
-| Notes           | |
-| Default Value   | |
+| Title           | Notification URL                                                                                            |
+| :-------------- | :---------------------------------------------------------------------------------------------------------- |
+| Description     | Specifies the web URL for receiving status notifications about conversations being processed.               |
+| Benefit         | Enables real-time monitoring and integration with external systems to track conversation processing status. |
+| Variable name   | callback                                                                                                    |
+| Required        | No                                                                                                          |
+| Accepted values | URL string                                                                                                  |
+| Notes           | Must include either the jobId or call recording name as a parameter when making callback requests.          |
+| Default value   | none                                                                                                        |
 
-| Title           | |
-| --------------- | --- |
-| Description     | |
-| Benefits        | |
-| Variable Name   | |
-| Required        | |
-| Accepted Values | |
-| Notes           | |
-| Default Value   | |
+### Audio Filter Model
 
-| Title           | |
-| --------------- | --- |
-| Description     | |
-| Benefits        | |
-| Variable Name   | |
-| Required        | |
-| Accepted Values | |
-| Notes           | |
-| Default Value   | |
+| Title           | Audio Filter Model                                                                                                                                       |
+| :-------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Description     | Specifies which noise filter model is used to process audio files. The processed audio file is saved after filtering.                                    |
+| Benefit         | Improves speech-to-text conversion accuracy by removing background noise and other audio artifacts.                                                      |
+| Variable name   | noise_filter                                                                                                                                             |
+| Required        | No                                                                                                                                                       |
+| Accepted values | Blank value (turns off this feature), or filter model name                                                                                               |
+| Notes           | When enabled, the selected noise filter removes background and other noise artifacts, significantly enhancing the accuracy of speech-to-text conversion. |
+| Default value   | SpectralGating                                                                                                                                           |
 
-| Title           | |
-| --------------- | --- |
-| Description     | |
-| Benefits        | |
-| Variable Name   | |
-| Required        | |
-| Accepted Values | |
-| Notes           | |
-| Default Value   | |
+### Audio Speed Optimization
 
-| Title           | |
-| --------------- | --- |
-| Description     | |
-| Benefits        | |
-| Variable Name   | |
-| Required        | |
-| Accepted Values | |
-| Notes           | |
-| Default Value   | |
+| Title           | Audio Speed Optimization                                                                                                                                                          |
+| :-------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Description     | Adjusts the phoneme rate to an optimal level for the speech-to-text model.                                                                                                        |
+| Benefit         | Significantly enhances transcript accuracy by optimizing audio playback speed for the speech recognition engine.                                                                  |
+| Variable name   | speed_filter                                                                                                                                                                      |
+| Required        | Yes                                                                                                                                                                               |
+| Accepted values | true, false                                                                                                                                                                       |
+| Notes           | When enabled, this feature modifies the audio playback rate to match the ideal phoneme processing rate of the speech-to-text model, resulting in improved transcription accuracy. |
+| Default value   | TRUE                                                                                                                                                                              |
+
+### Retain Original Audio File
+
+| Title           | Retain Original Audio File                                                                                                                      |
+| :-------------- | :---------------------------------------------------------------------------------------------------------------------------------------------- |
+| Description     | Controls whether the original audio file is kept or deleted after processing.                                                                   |
+| Benefit         | Allows organizations to balance privacy requirements with record retention needs.                                                               |
+| Variable name   | keep_audio                                                                                                                                      |
+| Required        | (Missing information - appears to be "No" based on context)                                                                                     |
+| Accepted values | true (keep audio), false (delete audio)                                                                                                         |
+| Notes           | Privacy regulations and storage capacity constraints may dictate whether a company retains the original audio files alongside transcript files. |
+| Default value   | FALSE                                                                                                                                           |
+
+### Remove Personal Information
+
+| Title           | Remove Personal Information                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| :-------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Description     | Removes personally identifiable information (PII) from conversation transcripts.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| Benefit         | Enhances privacy compliance and reduces liability when processing sensitive conversations.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| Variable name   | remove_pii                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| Required        | Optional                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| Accepted values | true (activate PII removal model), false (do not activate PII removal)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| Notes           | When enabled, PII is replaced with standardized tags based on information type (e.g., names, dates, phone numbers). The system uses the following replacement schema: "PERSON": "NAME", "GPE": "GEOGRAPHIC_SUBDIVISION", "DATE": "DATE", "PHONE": "PHONE_NUMBER", "VEHICLE": "VEHICLE_ID", "FAX": "FAX_NUMBER", "DEVICE": "DEVICE_IDENTIFIER", "EMAIL": "EMAIL", "URL": "URL", "SSN": "SOCIAL_SECURITY_NUMBER", "NID": "NATIONAL_ID_NUMBER", "MRN": "MEDICAL_RECORD_NUMBER", "IP": "IP_ADDRESS", "BIOMETRIC": "BIOMETRIC_IDENTIFIER", "PHOTO": "FULL_FACE_PHOTOGRAPHIC_IMAGE", "ACCOUNT": "ACCOUNT_NUMBER", "CERTIFICATE": "CERTIFICATE_NUMBER", "LICENSE": "LICENSE_NUMBER", "OTHER": "UNIQUE_IDENTIFIER" |
+| Default value   | TRUE                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+
+### AI Summary Enabled
+
+| Title           | AI Summary Enabled                                                                                                                                  |
+| :-------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Description     | Controls the generation of conversation summaries from chat transcripts.                                                                            |
+| Benefit         | Provides quick insight into conversation content without requiring full transcript review.                                                          |
+| Variable name   | summary                                                                                                                                             |
+| Required        | Optional                                                                                                                                            |
+| Accepted values | true (make summary), false (no summary)                                                                                                             |
+| Notes           | This is a key feature of the system. The prompt used to generate the summary can be customized for different use cases or information requirements. |
+| Default value   | TRUE                                                                                                                                                |
+
+### AI Summary LLM Model
+
+| Title           | AI Summary LLM Model                                                                          |
+| :-------------- | :-------------------------------------------------------------------------------------------- |
+| Description     | Specifies which large language model (LLM) is used for generating conversation summaries.     |
+| Benefit         | Allows customization of summary quality, cost, and performance based on specific needs.       |
+| Variable name   | summary_model_api_type                                                                        |
+| Required        | Yes                                                                                           |
+| Accepted values | LLM model name: (ENTER LIST OF MODELS)                                                        |
+| Notes           | This is a key feature that determines the quality and characteristics of generated summaries. |
+| Default value   | Llama3_3                                                                                      |
+
+### AI Summary API Type
+
+| Title           | AI Summary API Type                                                                                                        |
+| :-------------- | :------------------------------------------------------------------------------------------------------------------------- |
+| Description     | Specifies the API protocol used to communicate with the selected LLM model.                                                |
+| Benefit         | Provides flexibility to integrate with different AI service providers based on cost, performance, or feature requirements. |
+| Variable name   | summary_model_api_type                                                                                                     |
+| Required        | Yes                                                                                                                        |
+| Accepted values | 4 options, (David fill this in)                                                                                            |
+| Notes           | The LLM's URL configuration is independent of the API protocol selection.                                                  |
+| Default value   | OpenAI API                                                                                                                 |
+
+### AI Summary URL
+
+| Title           | AI Summary URL                                                                                                             |
+| :-------------- | :------------------------------------------------------------------------------------------------------------------------- |
+| Description     | Specifies the location of the LLM used for generating summaries, which may be on the local server or at a remote endpoint. |
+| Benefit         | Provides flexibility to use on-premises or cloud-based LLM resources based on security, latency, or cost requirements.     |
+| Variable name   | summary_model_url                                                                                                          |
+| Required        | Yes                                                                                                                        |
+| Accepted values | URL string                                                                                                                 |
+| Notes           | The URL configuration is independent of the API protocol selection.                                                        |
+| Default value   | none                                                                                                                       |
+
+### AI Summary Token
+
+| Title           | AI Summary Token                                                                     |
+| :-------------- | :----------------------------------------------------------------------------------- |
+| Description     | Specifies the authentication token for accessing the AI model used for summaries.    |
+| Benefit         | Enables secure authentication when connecting to commercial or private LLM services. |
+| Variable name   | summary_model_token                                                                  |
+| Required        | No                                                                                   |
+| Accepted values | Token string                                                                         |
+| Notes           | Authentication token is independent of the API protocol selection.                   |
+| Default value   | none                                                                                 |
+
+### LLM Query Configuration
+
+| Title           | LLM Query Configuration                                                                                                                                                 |
+| :-------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Description     | Controls which specific LLM query operations are executed on the AI model.                                                                                              |
+| Benefit         | Provides granular control over which AI operations are performed, optimizing resource usage and customizing functionality.                                              |
+| Variable name   | llm_query                                                                                                                                                               |
+| Required        | Optional                                                                                                                                                                |
+| Accepted values | Integer or string                                                                                                                                                       |
+| Notes           | This setting determines which numbered LLM queries will be executed. Each query is identified by a unique number - setting this value enables only the specified query. |
+| Default value   | TRUE                                                                                                                                                                    |
+
+### LLM Query LLM Model
+
+| Title           | LLM Query LLM Model                                                                                                                  |
+| :-------------- | :----------------------------------------------------------------------------------------------------------------------------------- |
+| Description     | Specifies which large language model (LLM) is used for processing queries.                                                           |
+| Benefit         | Allows selection of the most appropriate AI model based on performance requirements, cost considerations, and specific capabilities. |
+| Variable name   | llm_query_model_api_type                                                                                                             |
+| Required        | Yes                                                                                                                                  |
+| Accepted values | LLM model name: (ENTER LIST OF MODELS)                                                                                               |
+| Notes           | This is a key feature that determines the quality and characteristics of query responses.                                            |
+| Default value   | Llama3_3                                                                                                                             |
+
+### LLM Query API Type
+
+| Title           | LLM Query API Type                                                                                                            |
+| :-------------- | :---------------------------------------------------------------------------------------------------------------------------- |
+| Description     | Specifies the API protocol used to communicate with the selected LLM model for query processing.                              |
+| Benefit         | Enables integration with different AI service providers based on specific requirements for performance, features, or pricing. |
+| Variable name   | llm_query_model_api_type                                                                                                      |
+| Required        | Yes                                                                                                                           |
+| Accepted values | 4 options, (David fill this in)                                                                                               |
+| Notes           | The LLM's URL configuration is independent of the API protocol selection.                                                     |
+| Default value   | OpenAI API                                                                                                                    |
+
+### LLM Query URL
+
+| Title           | LLM Query URL                                                                                                                    |
+| :-------------- | :------------------------------------------------------------------------------------------------------------------------------- |
+| Description     | Specifies the location of the LLM used for processing queries, which may be on the local server or at a remote endpoint.         |
+| Benefit         | Provides flexibility to use on-premises or cloud-based LLM resources based on security, compliance, or performance requirements. |
+| Variable name   | llm_query_model_url                                                                                                              |
+| Required        | Yes                                                                                                                              |
+| Accepted values | URL string                                                                                                                       |
+| Notes           | The URL configuration is independent of the API protocol selection.                                                              |
+| Default value   | none                                                                                                                             |
+
+### LLM Query Token
+
+| Title           | LLM Query Token                                                                                           |
+| :-------------- | :-------------------------------------------------------------------------------------------------------- |
+| Description     | Specifies the authentication token for accessing the AI model used for query processing.                  |
+| Benefit         | Enables secure authentication when connecting to commercial or private LLM services for query operations. |
+| Variable name   | llm_query_model_token                                                                                     |
+| Required        | No                                                                                                        |
+| Accepted values | Token string                                                                                              |
+| Notes           | Authentication token is independent of the API protocol selection.                                        |
+| Default value   | none                                                                                                      |
