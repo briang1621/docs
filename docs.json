@@ -18,8 +18,9 @@
             "pages": [
               "index",
               "features", 
-              "sys_overview", 
-              "development"
+              "sys_overview",
+              "config",
+              "ui_demo"
             ]
           } 
         ]
