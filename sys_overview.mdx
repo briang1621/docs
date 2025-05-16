@@ -59,7 +59,7 @@ Call-Emma.ai includes 27 expertly crafted AI prompts that generate actionable in
 
 Call-Emma.ai enables the creation and execution of fully customized AI prompts, allowing clients to tailor analyses to their specific business needs. This flexibility supports the application of any number of AI-driven insights across each conversation.
 
-## Data Storage 
+## Data Storage
 
 Each stage of the processing pipeline can be securely stored, including the original and cleaned audio files, transcripts before and after privacy redaction, and the results of generative AI prompts. Data can be stored either on local instances or in cloud-based file storage systems, and the results of the generative AI analysis are fully compatible with a wide range of database platforms for seamless integration and downstream processing.
 
@@ -68,3 +68,15 @@ Each stage of the processing pipeline can be securely stored, including the orig
 Users can interact with the system via API or AI-powered chat to query and analyze generative AI data. This functionality enables the creation of statistics across conversations, generation of visualizations, identification of outliers, and application of custom filters. The "Chat with Data" section on the Manage page highlights four key use cases.
 
 ## LLM Options
+
+### **On-Instance LLM Deployment**
+
+Administrators can deploy an LLM Ollama on their own infrastructure using containerization in Call-Emma.ai. This enables secure, on-premises processing of large language model (LLM) prompts. Ollama can be configured for optimal performance across CPU- or GPU-based servers, as well as cloud instances. While this approach offers enhanced control and data privacy, token generation may be slower compared to using an external API.
+
+### **External LLM via API**
+
+Administrators can also integrate with external LLM providers through APIs, specifically using the OpenAI protocol. This approach offers quick deployment, minimal infrastructure overhead, and typically faster token generation due to the high-performance infrastructure maintained by the provider. When used in conjunction with Groq.com, the operating costs are significantly lower than running LLM inference on cloud instances. Please note that this approach may involve trade-offs in terms of data privacy, control, and customization compared to on-instance deployments.
+
+## **Data Storage Compatibility**
+
+Data storage for files and database entries is highly customizable and designed to be compatible with existing systems, including cloud storage and databases, ensuring seamless integration and efficient performance across your infrastructure. All files generated or processed by the system can be saved, including uploaded audio, filtered and cleaned audio, transcripts, privacy-enabled transcripts, and all AI-generated outputs.
