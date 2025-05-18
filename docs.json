@@ -8,23 +8,6 @@
     "dark": "#2ca4db"
   },
   "favicon": "/favicon.svg",
-"navigation": {
-  "global":  {
-    "anchors": [
-      {
-         "anchor": "Home",
-         "icon": "house",
-         "href": "https://slack.com"
-      },
-      {
-         "anchor": "Blog",
-         "icon": "pencil",
-         "href": "https://mintlify.com/blog"
-      }
-    ]
-  }
-},
-  
   "navigation": {
     "pages": [
       "index",
