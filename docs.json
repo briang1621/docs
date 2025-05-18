@@ -34,10 +34,9 @@
       "href": "https://call-emma.ai/dashboard"
     }
   },
-  "footer": { 
-        "label": "Copyright © 2025",
-        "href": "#"
-      }
-  
-  
+ "footer": {  
+          "label": "Documentation",
+          "href": "/docs"
+       
+ }
 }
