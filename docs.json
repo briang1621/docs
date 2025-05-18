@@ -24,17 +24,20 @@
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "label": "Home",
+        "href": "https://ainspire.ai"
       }
     ],
     "primary": {
       "type": "button",
       "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "href": "https://call-emma.ai/dashboard"
     }
   },
-  "footer": {
-    "label": "Copyright 2025 - All Rights Reserved"
-  }
+  "footer": { 
+        "label": "Copyright © 2025",
+        "href": "#"
+      }
+  
+  
 }
