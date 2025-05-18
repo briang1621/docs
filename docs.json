@@ -9,14 +9,33 @@
   },
   "favicon": "/favicon.svg",
   "navigation": {
-    "pages": [
-      "index",
+  "anchors": [
+    {
+      "anchor": "Documentation",
+      "icon": "book-open",
+      "pages": [
+        "index",
       "features", 
       "sys_overview",
       "ui_demo",
       "config"
-    ]
-  },
+      ]
+    },
+    {
+      "anchor": "API References",
+      "icon": "sqaure-terminal",
+      "pages": [
+        "api-reference/get",
+        "api-reference/post",
+        "api-reference/delete"
+      ]
+    },
+    {
+      "anchor": "Blog",
+      "href": "https://external-link.com/blog"
+    }
+  ]
+},
   "logo": {
     "light": "/logo/Logo_Emma_1.png",
     "dark": "/logo/dark4.png"
