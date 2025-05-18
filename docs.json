@@ -9,33 +9,14 @@
   },
   "favicon": "/favicon.svg",
   "navigation": {
-  "anchors": [
-    {
-      "anchor": "Documentation",
-      "icon": "book-open",
-      "pages": [
-        "index",
+    "pages": [
+      "index",
       "features", 
       "sys_overview",
       "ui_demo",
       "config"
-      ]
-    },
-    {
-      "anchor": "API References",
-      "icon": "sqaure-terminal",
-      "pages": [
-        "api-reference/get",
-        "api-reference/post",
-        "api-reference/delete"
-      ]
-    },
-    {
-      "anchor": "Blog",
-      "href": "https://external-link.com/blog"
-    }
-  ]
-},
+    ]
+  },
   "logo": {
     "light": "/logo/Logo_Emma_1.png",
     "dark": "/logo/dark4.png"
@@ -53,9 +34,11 @@
       "href": "https://call-emma.ai/dashboard"
     }
   },
- "footer": {  
-          "label": "Documentation",
-          "href": "/docs"
-       
+ "footer": {
+  "socials": {
+    "github": "https://github.com/yourusername",
+    "twitter": "https://twitter.com/yourusername",
+    "linkedin": "https://linkedin.com/in/yourusername"
+  } 
  }
 }
