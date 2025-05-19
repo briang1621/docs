@@ -1,0 +1,55 @@
+---
+title: "Question & Answer"
+description: "ddd"
+---
+
+## **Functionality Questions**
+
+1. What are the use cases?
+   - See our <Icon icon="arrow-right" iconType="regular" color="#595eff" size={17} /> [AI Use Case Page](/index)
+2. What are the core functionalities or features?
+   - See the <Icon icon="arrow-right" iconType="regular" color="#595eff" size={17} /> [ Features Page](/features)
+3. How can it be customized?
+   - See the <Icon icon="arrow-right" iconType="regular" color="#595eff" size={17} /> [configuration options page](/config)
+4. Do you have a Product Brochure?
+   - See our <Icon icon="arrow-right" iconType="regular" color="#595eff" size={17} />[ PDF Product Brochure](/brochure)
+
+## **Security & Compliance Questions**
+
+1. What security features are in place?
+   - Our software leverages FastAPI's built-in security features, including SSL encryption and access security tokens, to protect all data transmissions and user sessions. Authenticated user login is required for both the Admin and Data Panels, with token management and user access controlled by administrative permissions. 
+2. How is data encrypted in transit and at rest?
+   - Data is encrypted in transit using SSL 256-bit encryption to ensure secure communication between clients and the API. Since our system integrates directly with your file system and database via SQLAlchemy, data at rest is governed by your internal security policies and access controls managed by your administrators. 
+3. Does the software comply with industry standards (e.g., SOC 2, ISO 27001, GDPR)?
+   - If personal identity information removal is enabled as part of the audio processing then yes we can prove that it complies with these industry standards.  
+4. How is user access controlled and audited?
+   - User access is managed via password-based authentication, with credentials controlled through the Admin Panel. Activity is logged, and login settings are configurable via environment variables; full audit logging can be added in future updates.
+
+## **Deployment & Integration & Processing Speed**
+
+1. Can we host it on-prem or in a private cloud?
+   - Yes, the software supports on-premises and private cloud deployments, with validation on AWS. Hybrid deployments are not supported.
+2. What APIs or connectors are available for connecting to CCS? Is there documentation? 
+   - The software offers RESTful APIs built with FastAPI, featuring self-describing endpoints and comprehensive documentation through OpenAPI (formerly Swagger). Full API documentation is provided to support seamless integration with CCS.
+3. How long does initial deployment take? 
+   - Initial deployment is straightforward using containers, but API integration will require development effort. We recommend allocating a minimum of 40 hours, with the majority of that time focused on integration testing.
+4. What are the disk space requirements ? 
+   - Disk space requirements range from approximately **XX GB** when using a remote LLM via API to **XX GB** when hosting both the transcription model and LLM locally with Ollama.
+5. What are the mimimum and optimized cloud instance requirements? 
+   - See our costs page 
+
+## **Scalability & Performance**
+
+**d**
+
+## **Cost & Licensing**
+
+**d**
+
+## **Support & SLAs**
+
+**d**
+
+## **Training & Onboarding**
+
+**d**
