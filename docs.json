@@ -14,7 +14,8 @@
       "features", 
       "sys_overview",
       "ui_demo",
-      "config"
+      "config",
+      "q_a"
     ]
   },
   "logo": {
