@@ -15,7 +15,7 @@ description: "The Call-Emma.ai add-on for call center software is a highly confi
 
 ### LLM Processing on Cloud Instance Deployment 
 
-The first table outlines the cost-optimized deployment option, where all data processing is contained within a single cloud instance. This configuration is priced between **\$0.04 to \$0.06 per hour of audio processed**, translating to approximately **\$6.50 to \$10.00 per agent per month**, assuming a standard workload of **40 hours per week over four weeks**.
+The first table outlines the cost-optimized deployment option, where all data processing is contained within a single cloud instance. This configuration is priced between **<u>\$0.04 to \$0.06 per hour of audio processed, translating to approximately \$6.50 to \$10.00 per agent per month, assuming a standard workload of 40 hours per week over four weeks.</u>**
 
 These estimates are based on on-demand pricing for Nvidia G4 or G5 series instances on AWS. Using reserved instances or spot pricing can further reduce costs. Note that these figures are based on running 8 AI prompts on an Llama 8B model. The more AI analysis prompts executed, the higher the operational costs.
 
@@ -38,7 +38,7 @@ These estimates are based on on-demand pricing for Nvidia G4 or G5 series instan
 
 ### LLM Processing Externally via an API with S2T on the Instance 
 
-The second table outlines the cost-optimized deployment option, where speech to text is processed on the instance but LLM inference is performed externally via an API. This configuration is priced between **\$0.006 to \$0.033 per hour of audio processed**, translating to approximately **\$1 to \$6 per agent per month**, assuming a standard workload of **40 hours per week over four weeks**.
+The second table outlines the cost-optimized deployment option, where speech to text is processed on the instance but LLM inference is performed externally via an API. This configuration **<u>is priced between \$0.006 to \$0.033 per hour of audio processed, translating to approximately \$1 to \$6 per agent per month, assuming a standard workload of 40 hours per week over four weeks.</u>**
 
 These estimates are based on on-demand pricing for AI Processing externally at [<u>Grog.com</u>](http://Grog.com) and AI processing of Speech-to-Text via the cloud instance. Using reserved instances or spot pricing can further reduce costs. Note that these figures are based on running 8 AI prompts externally. The more AI analysis prompts executed, the higher the operational costs.
 
@@ -71,4 +71,4 @@ For speed-optimized deployments where receiving results quickly is paramount and
 
 In this configuration, speech-to-text (S2T) processing is handled via API by a service such as [Groq.com](http://Groq.com), utilizing the Whisper Large v3 Turbo model. With a speed factor of 216x, it can transcribe one hour of audio in approximately 17 seconds at a cost of \$0.04 per hour, based on pricing as of May 22, 2025.  Following transcription, AI inference is also performed through [Groq.com](http://Groq.com), using models such as LLaMA 3.1 8B or LLaMA 3.3 70B. The expected processing time after a call is completed is typically a few minutes. For example, results for a 20-minute call may be available in less than five minutes.
 
-This configuration is estimated to cost between \$0.04 and \$0.08 per hour of audio processed with the 8B Llama 3.1 model and \$0.05 and \$0.1 per hour of audio processed with the 70B Llama 3.3 model. translating to approximately **\$6 to \$16 per agent per month**, assuming a standard workload of \*\*40 hours per week over four weeks. \*\*
+**<u>This configuration is estimated to cost between \$0.04 and \$0.08 per hour of audio processed with the 8B Llama 3.1 model and \$0.05 and \$0.1 per hour of audio processed with the 70B Llama 3.3 model. translating to approximately \$6 to \$16 per agent per month, assuming a standard workload of 40 hours per week over four weeks. </u>**
