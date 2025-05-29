@@ -1,58 +1,71 @@
 ---
 title: "6. Question & Answer"
-description: "ddd"
+description: "This page outlines key information about Emma's security, compliance, deployment options, integration capabilities, scalability, cost structure, support offerings, and onboarding process, providing technical and operational details for enterprise evaluation."
 ---
 
 ![Q A Web](/images/q_a.webp)
 
 ## **Functionality Questions**
 
-1. What are the use cases?
-   - See our <Icon icon="arrow-right" iconType="regular" color="#595eff" size={17} /> [AI Use Case Page](/index)
-2. What are the core functionalities or features?
-   - See the <Icon icon="arrow-right" iconType="regular" color="#595eff" size={17} /> [ Features Page](/features)
-3. How can it be customized?
-   - See the <Icon icon="arrow-right" iconType="regular" color="#595eff" size={17} /> [configuration options page](/config)
-4. Do you have a Product Brochure?
-   - See our <Icon icon="arrow-right" iconType="regular" color="#595eff" size={17} />[ PDF Product Brochure](/brochure)
+What are the use cases?
+
+- See our <Icon icon="arrow-right" iconType="regular" color="#595eff" size={17} /> [AI Use Case Page](/index)
+  What are the core functionalities or features?
+- See the <Icon icon="arrow-right" iconType="regular" color="#595eff" size={17} /> [ Features Page](/features)
+  How can it be customized?
+- See the <Icon icon="arrow-right" iconType="regular" color="#595eff" size={17} /> [configuration options page](/config)
+  Do you have a Product Brochure?
+- See our <Icon icon="arrow-right" iconType="regular" color="#595eff" size={17} />[ PDF Product Brochure](/brochure)
 
 ## **Security & Compliance Questions**
 
-1. What security features are in place?
-   - Our software leverages FastAPI's built-in security features, including SSL encryption and access security tokens, to protect all data transmissions and user sessions. Authenticated user login is required for both the Admin and Data Panels, with token management and user access controlled by administrative permissions. 
-2. How is data encrypted in transit and at rest?
-   - Data is encrypted in transit using SSL 256-bit encryption to ensure secure communication between clients and the API. Since our system integrates directly with your file system and database via SQLAlchemy, data at rest is governed by your internal security policies and access controls managed by your administrators. 
-3. Does the software comply with industry standards (e.g., SOC 2, ISO 27001, GDPR)?
-   - If personal identity information removal is enabled as part of the audio processing then yes we can prove that it complies with these industry standards.  
-4. How is user access controlled and audited?
-   - User access is managed via password-based authentication, with credentials controlled through the Admin Panel. Activity is logged, and login settings are configurable via environment variables; full audit logging can be added in future updates.
+**What security features are in place?**\
+Emma uses FastAPI to serve API responses, leveraging its built-in security features, including SSL encryption and secure access tokens. Authenticated user login is required for both administrator panels. All access is logged to enable comprehensive access auditing.
 
-## **Deployment & Integration & Processing Speed**
+**Does the software comply with industry standards (e.g., SOC 2, ISO 27001, GDPR)?**\
+If personal identity information removal is enabled during audio processing, we can demonstrate compliance with relevant industry standards, including SOC 2, ISO 27001, and GDPR, through the certified packages we utilize.
 
-1. Can we host it on-prem or in a private cloud?
-   - Yes, the software supports on-premises and private cloud deployments, with validation on AWS. Hybrid deployments are not supported.
-2. What APIs or connectors are available for connecting to CCS? Is there documentation? 
-   - The software offers RESTful APIs built with FastAPI, featuring self-describing endpoints and comprehensive documentation through OpenAPI (formerly Swagger). Full API documentation is provided to support seamless integration with CCS.
-3. How long does initial deployment take? 
-   - Initial deployment is straightforward using containers, but API integration will require development effort. We recommend allocating a minimum of 40 hours, with the majority of that time focused on integration testing.
-4. What are the disk space requirements ? 
-   - Disk space requirements range from approximately **XX GB** when using a remote LLM via API to **XX GB** when hosting both the transcription model and LLM locally with Ollama.
-5. What are the mimimum and optimized cloud instance requirements?
-   - See our costs page
-6. 
+## **Deployment, Integration, & Processing Speed**
+
+**Can the software be hosted on-premises or in a private cloud?**\
+Yes, the software supports deployment in on-premises and private cloud environments. Validation has been performed on AWS. Hybrid deployments are not currently supported.
+
+**What APIs or connectors are available for integration with CCS? Is documentation provided?**\
+The platform provides RESTful APIs built with FastAPI, featuring self-describing endpoints. Comprehensive API documentation is available through OpenAPI (formerly Swagger) to facilitate seamless integration with CCS.
+
+**What is the expected duration for initial deployment?**\
+Initial deployment is streamlined through containerized delivery. However, API integration requires development effort. We recommend allocating a minimum of 20 hours, with most of the time focused on integration testing.
+
+**What are the disk space requirements?**\
+Disk space requirements start at approximately 5 GB when using a remote LLM. This requirement increases based on the size of the local LLM downloaded via Ollama.
+
+**What are the minimum and recommended cloud instance specifications?**\
+Please refer to our cost and infrastructure documentation for detailed specifications.
 
 ## **Scalability & Performance**
 
-**d**
+**How does the system scale?**\
+The system monitors the job queue and dynamically scales resources up or down based on workload demands.
+
+## **Cloud Hosting Support**
+
+**Can the software run on different cloud platforms?**\
+Yes. Emma is fully containerized, enabling deployment across a wide range of cloud environments. While we have validated deployments on AWS, the containerized architecture ensures compatibility with other major cloud providers such as Azure, Google Cloud Platform, and private cloud infrastructures. This flexibility allows organizations to deploy Emma within their preferred environment while meeting performance and compliance requirements.
 
 ## **Cost & Licensing**
 
-**d**
+**What are the licensing rates and terms?**\
+Licensing is based on an estimated number of users. Please contact us directly for detailed rates and licensing terms.
+
+**What is the cost of the system?**\
+We are currently seeking beta customers for pilot deployments. Beta participants are required to make an initial payment, which may be applied toward future licensing costs.
 
 ## **Support & SLAs**
 
-**d**
+**Do you provide support or software upgrades?**\
+Support and upgrades are included if specified in the negotiated licensing agreement.
 
 ## **Training & Onboarding**
 
-**d**
+**Is onboarding or training provided?**\
+Yes, we offer daily integration support as part of the onboarding process.
