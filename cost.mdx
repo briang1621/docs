@@ -16,15 +16,20 @@ For Operations focused on recieving the results as quickly as possible, then we 
 
 3. **Speed-Optimized Deployments:** This is a cost-effective option with the advantage of being the quickest method to return results to the system. However, it relies on external processing of audio via Speech-to-Text (S2T) and AI via Large Language Model (LLM) APIs.
 
-## Summary of Cost Options 
+## Summary of Cost Options
 
-| Instance Type                               | LLM on Instance                         | Max Number of Agents Supported per Instance | Cost / Hour of Audio | Monthly Costs per Agent |
-| ------------------------------------------- | --------------------------------------- | ------------------------------------------- | -------------------- | ----------------------- |
-| g4dn.2xlarge                                | Yes                                     | 35 agents                                   | \$0.063              | \$10.00 /month          |
-| g5.xlarge                                   | Yes                                     | 75 agents                                   | \$0.040              | \$6.40 /month           |
-| t4g.2xlarge                                 | External AI Groq.com Lama 3.1 8B        | 240 agents                                  | \$0.02 -  \$0.03     | \$0.97 /month           |
-| t4g.2xlarge                                 | External AI  Groq.com Lama 3.3 70B      | 240 agents                                  | \$0.03 -  \$0.04     | \$5.27 /month           |
-| t4g.2xlarge<br />Results in 10 mins or less | External AI Grog.com. for audio and LLM | \>1000 agent                                | \$0.04 to \$0.08     | \$10 to \$16 /month     |
+| Instance Type | LLM on Instance                    | Max Number of Agents Supported per Instance | Cost / Hour of Audio | Monthly Costs per Agent |
+| ------------- | ---------------------------------- | ------------------------------------------- | -------------------- | ----------------------- |
+| g4dn.2xlarge  | Yes                                | 35 agents                                   | \$0.063              | \$10.00 /month          |
+| g5.xlarge     | Yes                                | 75 agents                                   | \$0.040              | \$6.40 /month           |
+| t4g.2xlarge   | External AI Groq.com Lama 3.1 8B   | 240 agents                                  | \$0.02 -  \$0.03     | \$0.97 /month           |
+| t4g.2xlarge   | External AI  Groq.com Lama 3.3 70B | 240 agents                                  | \$0.03 -  \$0.04     | \$5.27 /month           |
+
+## Cost for System That Generates Results in less than 10 minutes 
+
+| Instance Type | LLM on Instance                         | Max Number of Agents Supported per Instance | Cost / Hour of Audio | Monthly Costs per Agent |
+| :------------ | :-------------------------------------- | :------------------------------------------ | :------------------- | :---------------------- |
+| t4g.2xlarge   | External AI Grog.com. for audio and LLM | \>1000 agent                                | \$0.04 to \$0.08     | \$10 to \$16 /month     |
 
 ## Cost Optimized Deployments
 
