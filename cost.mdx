@@ -5,7 +5,7 @@ description: "The Call-Emma.ai add-on for call center software is a highly confi
 
 ![Cost Web](/images/cost.webp)
 
-[**Call-Emma.ai**](http://Call-Emma.ai) offers flexible configuration options that support either cost-optimized processing or high-speed processing. 
+[**Call-Emma.ai**](http://Call-Emma.ai) offers flexible configuration options that support either cost-optimized processing or high-speed processing.
 
 For operations focused on minimizing deployment costs for generative AI features, we recommend two deployment types:
 
@@ -16,11 +16,21 @@ For Operations focused on recieving the results as quickly as possible, then we 
 
 3. **Speed-Optimized Deployments:** This is a cost-effective option with the advantage of being the quickest method to return results to the system. However, it relies on external processing of audio via Speech-to-Text (S2T) and AI via Large Language Model (LLM) APIs.
 
+## Summary of Cost Options 
+
+| Instance Type                               | LLM on Instance                         | Max Number of Agents Supported per Instance | Cost / Hour of Audio | Monthly Costs per Agent |
+| ------------------------------------------- | --------------------------------------- | ------------------------------------------- | -------------------- | ----------------------- |
+| g4dn.2xlarge                                | Yes                                     | 35 agents                                   | \$0.063              | \$10.00 /month          |
+| g5.xlarge                                   | Yes                                     | 75 agents                                   | \$0.040              | \$6.40 /month           |
+| t4g.2xlarge                                 | External AI Groq.com Lama 3.1 8B        | 240 agents                                  | \$0.02 -  \$0.03     | \$0.97 /month           |
+| t4g.2xlarge                                 | External AI  Groq.com Lama 3.3 70B      | 240 agents                                  | \$0.03 -  \$0.04     | \$5.27 /month           |
+| t4g.2xlarge<br />Results in 10 mins or less | External AI Grog.com. for audio and LLM | \>1000 agent                                | \$0.04 to \$0.08     | \$10 to \$16 /month     |
+
 ## Cost Optimized Deployments
 
 ### LLM Processing on Cloud Instance Deployment 
 
-The first table outlines the cost-optimized deployment option, where all data processing is contained within a single cloud instance. This configuration is priced between **<u>\$0.04 to \$0.06 per hour of audio processed, translating to approximately \$6.50 to \$10.00 per agent per month, assuming a standard workload of 40 hours per week over four weeks.</u>**
+The first table outlines the cost-optimized deployment option, where all data processing is contained within a single cloud instance. This configuration is priced between **<u>\$0.04 to \$0.06 per hour of audio processed</u>**, translating to approximately **<u>\$6.50 to \$10.00 per agent per month</u>**, assuming a standard workload of 40 hours per week over four weeks.
 
 These estimates are based on on-demand pricing for Nvidia G4 or G5 series instances on AWS. Using reserved instances or spot pricing can further reduce costs. Note that these figures are based on running 8 AI prompts on an Llama 8B model. The more AI analysis prompts executed, the higher the operational costs.
 
@@ -43,7 +53,7 @@ These estimates are based on on-demand pricing for Nvidia G4 or G5 series instan
 
 ### LLM Processing Externally via an API with S2T on the Instance 
 
-The second table outlines the cost-optimized deployment option, where speech to text is processed on the instance but LLM inference is performed externally via an API. This configuration **<u>is priced between \$0.006 to \$0.033 per hour of audio processed, translating to approximately \$1 to \$6 per agent per month, assuming a standard workload of 40 hours per week over four weeks.</u>**
+The second table outlines the cost-optimized deployment option, where speech to text is processed on the instance but LLM inference is performed externally via an API. This configuration is priced between \$0.006 to \$0.033 per hour of audio processed, translating to approximately \$1 to \$6 per agent per month, assuming a standard workload of 40 hours per week over four weeks.
 
 These estimates are based on on-demand pricing for AI Processing externally at [<u>Grog.com</u>](http://Grog.com) and AI processing of Speech-to-Text via the cloud instance. Using reserved instances or spot pricing can further reduce costs. Note that these figures are based on running 8 AI prompts externally. The more AI analysis prompts executed, the higher the operational costs.
 
@@ -62,8 +72,6 @@ These estimates are based on on-demand pricing for AI Processing externally at [
 | Cost Out (\$/M tokens)                                                                              | \$0.08                                   | \$0.79                                    |
 | External API Cost / Hour of Call                                                                    | \$0.0027                                 | \$0.0296                                  |
 | Cost per Hour of Converstation Processed                                                            | \$0.0061                                 | \$0.0329                                  |
-| Max Performance Per Server Instance                                                                 |                                          |                                           |
-| Hours per week                                                                                      |                                          |                                           |
 | Number of Hours of Converstation that can be Processed per 24 hour day                              | 1920 Hours                               | 1920 Hours                                |
 | Supported Number of Call Center Agents for Results Ready Next Day (Assumed 8 Hour shifts)           | 240 Agents                               | 240 Agents                                |
 | Cost Ratios                                                                                         | Assuming 240 Agents                      | Assuming 240 Agents                       |
@@ -76,4 +84,4 @@ For speed-optimized deployments where receiving results quickly is paramount and
 
 In this configuration, speech-to-text (S2T) processing is handled via API by a service such as [Groq.com](http://Groq.com), utilizing the Whisper Large v3 Turbo model. With a speed factor of 216x, it can transcribe one hour of audio in approximately 17 seconds at a cost of \$0.04 per hour, based on pricing as of May 22, 2025.  Following transcription, AI inference is also performed through [Groq.com](http://Groq.com), using models such as LLaMA 3.1 8B or LLaMA 3.3 70B. The expected processing time after a call is completed is typically a few minutes. For example, results for a 20-minute call may be available in less than five minutes.
 
-**<u>This configuration is estimated to cost between \$0.04 and \$0.08 per hour of audio processed with the 8B Llama 3.1 model and \$0.05 and \$0.1 per hour of audio processed with the 70B Llama 3.3 model. translating to approximately \$6 to \$16 per agent per month, assuming a standard workload of 40 hours per week over four weeks. </u>**
+This configuration is estimated to cost between \$0.04 and \$0.08 per hour of audio processed with the 8B Llama 3.1 model and \$0.05 and \$0.1 per hour of audio processed with the 70B Llama 3.3 model. translating to approximately \$6 to \$16 per agent per month, assuming a standard workload of 40 hours per week over four weeks. 
