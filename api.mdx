@@ -1,0 +1,10 @@
+---
+title: "New file"
+description: "ENPOINT NAME	/audio/submit-job						 DESCRIPTION	An audio processing job is submitted through this endpoint, which contains options for configuring the job. Careful configuration of the job will ensure that the highest quality results are achieved while balancing cost and performance. Please note the different parameters that need to be submitted along with the job.						"
+---
+
+
+| **PARAMETER**      | **TYPE** | **REQUIRED** | **IF BLANK**                       | **INPUT**               | **DESCRIPTION**                                                                                                                                                                     | **ERRORS**                                                                                                                     |
+| :----------------- | :------- | :----------- | :--------------------------------- | :---------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------- |
+| client-job-id      | str      | optional     | If blank this feature is disabled. | custom job id number    | This is an optional customer reference ID for tracking purposes. The system generates its own job ID regardless of whether this field is provided.                                  | The entered value cannot be longer than 255 characters.                                                                        |
+| audio-filter-model | str      | optional     | If blank this feature is disabled. | audio filter model name | Audio filtering helps improve the accuracy of speech-to-text transcription. To select an audio filter, choose it by name. If this field is blank, audio filtering will be disabled. | The audio filter model name was entered incorrectly or an invalid model was selected. Please verify the available model names. |
