@@ -1,7 +1,15 @@
 ---
 title: "API"
-description: "ENPOINT NAME	/audio/submit-job						 DESCRIPTION	An audio processing job is submitted through this endpoint, which contains options for configuring the job. Careful configuration of the job will ensure that the highest quality results are achieved while balancing cost and performance. Please note the different parameters that need to be submitted along with the job.						"
+description: "ENPOINT NAME	 /audio/submit-job	 DESCRIPTION	An audio processing job is submitted through this endpoint, which contains options for configuring the job. Careful configuration of the job will ensure that the highest quality results are achieved while balancing cost and performance. Please note the different parameters that need to be submitted along with the job.						"
 ---
+
+## Submit a Job 
+
+An audio processing job is submitted through this endpoint, which contains options for configuring the job. Careful configuration of the job will ensure that the highest quality results are achieved while balancing cost and performance. Please note the different parameters that need to be submitted along with the job.						
+
+```javascript
+GET /audio/submit-job
+```
 
 | **PARAMETER**      | **TYPE** | **REQUIRED** | **IF BLANK**                       | **INPUT**               | **DESCRIPTION**                                                                                                                                                                     | **ERRORS**                                                                                                                     |
 | :----------------- | :------- | :----------- | :--------------------------------- | :---------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------- |
