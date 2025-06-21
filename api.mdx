@@ -13,11 +13,12 @@ GET /audio/submit-job
 
 ### **Submit Job Format**
 
-<ParamField query="client-job-id" path="param" header="client-job-id" default="If blank this feature is disabled." type="string" required placeholder="dssdsd">This is an optional customer reference ID for tracking purposes. The system generates its own job ID regardless of whether this field is provided.
+<ParamField query="client-job-id" path="param" header="client-job-id" default="If blank this feature is disabled." type="string" required placeholder="dssdsd">
+  This is an optional customer reference ID for tracking purposes. The system generates its own job ID regardless of whether this field is provided.
 </ParamField>
- 
 
-  <ParamField query="client-job-id" header="client-job-id" default="If blank this feature is disabled." type="string" required="optional" placeholder="custom job id number">
+ 
+ <ParamField query="client-job-id" header="client-job-id" default="If blank this feature is disabled." type="string" required="optional" placeholder="custom job id number">
 This is an optional customer reference ID for tracking purposes. The system generates its own job ID regardless of whether this field is provided.
 </ParamField>
 
@@ -36,6 +37,7 @@ The selection of the speech-to-text model is important, as the model significant
 <ParamField query="remove-ppi" header="remove-ppi" default="If blank this feature is disabled." type="string" required="optional" placeholder="remove ppi model name">
 The selection of the PII model (Personal Identifiable Information) will remove data such as names, addresses, banking information, passwords, IP addresses, usernames, and more from the text transcript of the conversation. If not provided or disabled, the transcript will remain unchanged.
 </ParamField>
+
 
 
 client-job-id  (optional) 
