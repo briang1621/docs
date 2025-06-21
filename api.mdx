@@ -13,7 +13,20 @@ GET /audio/submit-job
 
 ### **Submit Job Format**
 
-<ParamField query="client-job-id" path="param" body="asasd" header="client-job-id" default="If blank this feature is disabled." type="boolen" required placeholder="dssdsd">
+<ParamField query="client-job-id" path="param" header="client-job-id" default="If blank this feature is disabled." type="string" required placeholder="dssdsd">
+
+<ParamField query="client-job-id" header="client-job-id" default="If blank this feature is disabled." type="string" required placeholder="client-job-id"/>
+  
+<ParamField query="audio-filter-model" header="audio-filter-model" default="If blank this feature is disabled." type="string" required placeholder="audio-filter-model"/>
+  
+<ParamField query="speed-correction-model" header="speed-correction-model" default="If blank this feature is disabled." type="string" required placeholder="speed-correction-model"/>
+  
+<ParamField query="s2t-model" header="s2t-model" default="Can not be blank" type="string" required placeholder="s2t-model"/>
+  
+<ParamField query="remove-ppi" header="remove-ppi" default="If blank this feature is disabled." type="string" required placeholder="remove-ppi"/>
+
+
+  
   This is an optional customer reference ID for tracking purposes. The system generates its own job ID regardless of whether this field is provided.
 </ParamField>
 
