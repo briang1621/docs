@@ -13,26 +13,30 @@ GET /audio/submit-job
 
 ### **Submit Job Format**
 
-<ParamField query="client-job-id" path="param" header="client-job-id" default="If blank this feature is disabled." type="string" required placeholder="dssdsd">
+<ParamField query="client-job-id" path="param" header="client-job-id" default="If blank this feature is disabled." type="string" required placeholder="dssdsd">This is an optional customer reference ID for tracking purposes. The system generates its own job ID regardless of whether this field is provided.
+</ParamField>
+ 
 
-<ParamField query="client-job-id" header="client-job-id" default="If blank this feature is disabled." type="string" required placeholder="client-job-id"/>
-  
-<ParamField query="audio-filter-model" header="audio-filter-model" default="If blank this feature is disabled." type="string" required placeholder="audio-filter-model"/>
-  
-<ParamField query="speed-correction-model" header="speed-correction-model" default="If blank this feature is disabled." type="string" required placeholder="speed-correction-model"/>
-  
-<ParamField query="s2t-model" header="s2t-model" default="Can not be blank" type="string" required placeholder="s2t-model"/>
-  
-<ParamField query="remove-ppi" header="remove-ppi" default="If blank this feature is disabled." type="string" required placeholder="remove-ppi"/>
-
-
-  
-  This is an optional customer reference ID for tracking purposes. The system generates its own job ID regardless of whether this field is provided.
+  <ParamField query="client-job-id" header="client-job-id" default="If blank this feature is disabled." type="string" required="optional" placeholder="custom job id number">
+This is an optional customer reference ID for tracking purposes. The system generates its own job ID regardless of whether this field is provided.
 </ParamField>
 
-<ResponseField name="response" type="string">
-  Enter a description
-</ResponseField>
+<ParamField query="audio-filter-model" header="audio-filter-model" default="If blank this feature is disabled." type="string" required="optional" placeholder="audio filter model name">
+Audio filtering helps improve the accuracy of speech-to-text transcription. To select an audio filter, choose it by name. If this field is blank, audio filtering will be disabled.
+</ParamField>
+
+<ParamField query="speed-correction-model" header="speed-correction-model" default="If blank this feature is disabled." type="string" required="optional" placeholder="speed correction model name">
+Audio speed correction improves the accuracy of speech-to-text transcriptions. To activate this feature, specify the speed correction model name. If left blank, speed correction will be disabled.
+</ParamField>
+
+<ParamField query="s2t-model" header="s2t-model" default="Can not be blank" type="string" required="required" placeholder="speech to text model name">
+The selection of the speech-to-text model is important, as the model significantly influences transcription accuracy and the CPU/GPU load on the instance. Some models are faster but less accurate, while others are slower but more accurate. State the selected model name.
+</ParamField>
+
+<ParamField query="remove-ppi" header="remove-ppi" default="If blank this feature is disabled." type="string" required="optional" placeholder="remove ppi model name">
+The selection of the PII model (Personal Identifiable Information) will remove data such as names, addresses, banking information, passwords, IP addresses, usernames, and more from the text transcript of the conversation. If not provided or disabled, the transcript will remain unchanged.
+</ParamField>
+
 
 client-job-id  (optional) 
 
