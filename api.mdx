@@ -3,13 +3,25 @@ title: "API"
 description: "ENPOINT NAME	 /audio/submit-job	 DESCRIPTION	An audio processing job is submitted through this endpoint, which contains options for configuring the job. Careful configuration of the job will ensure that the highest quality results are achieved while balancing cost and performance. Please note the different parameters that need to be submitted along with the job.						"
 ---
 
-## Submit a Job 
+## Submit a Job
 
-An audio processing job is submitted through this endpoint, which contains options for configuring the job. Careful configuration of the job will ensure that the highest quality results are achieved while balancing cost and performance. Please note the different parameters that need to be submitted along with the job.						
+An audio processing job is submitted through this endpoint, which contains options for configuring the job. Careful configuration of the job will ensure that the highest quality results are achieved while balancing cost and performance Please note the different parameters that need to be submitted along with the job.
 
 ```javascript
 GET /audio/submit-job
 ```
+
+### **Submit Job Format**
+
+<ParamField query="client-job-id" path="param" body="asasd" header="client-job-id" default="If blank this feature is disabled." type="boolen" required placeholder="dssdsd">
+  This is an optional customer reference ID for tracking purposes. The system generates its own job ID regardless of whether this field is provided.
+</ParamField>
+
+<ResponseField name="response" type="string">
+  Enter a description
+</ResponseField>
+
+client-job-id  (optional) 
 
 | **PARAMETER**      | **TYPE** | **REQUIRED** | **IF BLANK**                       | **INPUT**               | **DESCRIPTION**                                                                                                                                                                     | **ERRORS**                                                                                                                     |
 | :----------------- | :------- | :----------- | :--------------------------------- | :---------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------- |
